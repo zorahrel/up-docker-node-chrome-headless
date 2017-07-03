@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
 MAINTAINER Harry <harald.urban@weltn24.de>
-LABEL 
 
 # Install deps
 RUN apt-get update && apt-get install -y \
