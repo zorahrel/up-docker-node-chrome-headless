@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
 	ca-certificates \
 	curl \
     gnupg \
+    git \
 	--no-install-recommends
 
 # Get Chrome sources
