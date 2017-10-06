@@ -32,8 +32,8 @@ RUN apt-get update && apt-get install -y \
 
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
-RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.2.1-2nodesource1~xenial1_amd64.deb > node.deb \
+RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.4.0-1nodesource1~xenial1_amd64.deb > node.deb \
  && dpkg -i node.deb \
  && rm node.deb
 
-RUN npm --global install yarn@0.27.5
+RUN npm install -g yarn@1.1.0
