@@ -36,4 +36,4 @@ RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.4.0-1no
  && dpkg -i node.deb \
  && rm node.deb
 
-RUN npm install -g yarn@1.2.0
+RUN npm install -g yarn@1.1.0
