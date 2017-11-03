@@ -30,10 +30,17 @@ RUN apt-get update && apt-get install -y \
     google-chrome-stable \
     --no-install-recommends
 
+# Get yarn sources
+RUN curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+    && echo "deb [arch=amd64] https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
+
+# Install yarn pinned version
+RUN apt-get update && apt-get install -y \
+    yarn=1.3.2-1 \
+    --no-install-recommends
+
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
 RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.4.0-1nodesource1~xenial1_amd64.deb > node.deb \
  && dpkg -i node.deb \
  && rm node.deb
-
-RUN npm install -g yarn@1.3.0
