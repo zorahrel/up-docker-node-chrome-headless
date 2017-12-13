@@ -7,7 +7,7 @@ This Docker image is maintained by WeltN24 GmbH Developers and its main purpose 
 - aws
 - git
 - pip
-- chrome
+- chrome latest
 - node
 - npm
 - yarn
